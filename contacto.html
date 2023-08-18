@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compra y ventas de autos</title>
+    <link rel="stylesheet" href="main.css" />
+    <script type="text/javascript" src="jquery-3.7.0.min.js"></script>
+  </head>
+  <body>
+    <header id="Main-header">
+      <img src="5f0f3f976c388ef2c20022b3fdfddb091455ee15446d070ce6e32250ed9620cc.jpg" alt="" class="Logo">
+      <ul class="unlisted">
+          <li class="list-items"><a href="index.html">Inicio</a></li>
+          <li class="list-items"><a href="nosotros.html">Nosotros</a></li>
+          <li class="list-items"><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <img src="icons8-hamburger-button-50.png" alt="" class="Burguer">
+  </header>
+    <form action="" id="form">
+      <section class="nameandlastname">
+        <label for="nombre">Nombre:</label>
+        <input type="text" placeholder="Nombre" name="nombre" id="nombre" />
+        <label for="apellido">Apellido:</label>
+        <input
+          type="text"
+          placeholder="Apellido"
+          name="apellido"
+          id="apellido"
+        />
+      </section>
+      <section class="emailandtel">
+        <label for="correo">Email:</label>
+        <input
+          type="email"
+          placeholder="Correo electronico"
+          name="correo"
+          id="correo"
+        />
+        <label for="telefono">Numero telefonico:</label>
+        <input
+          type="telefono"
+          placeholder="Numero de telefono"
+          name="telefono"
+          id="telefono"
+          pattern="\([0-9]{3}\) [0-9]{3}[ -][0-9]{4}"
+          title="Un número de teléfono válido consiste en un área de código de 3 dígitos entre corchetes, un espacio, los tres primeros dígitos del número, un espacio o guión (-), y cuatro dígitos más"
+        />
+      </section>
+      <label for="comentario">Mensaje:</label>
+      <section class="comentario">
+        <textarea
+          rows="10"
+          cols="50"
+          id="comentario"
+          name="comentario"
+          placeholder="Ponga su comentario aqui..."
+        ></textarea>
+      </section>
+      <section class="enviar">
+        <input type="submit" value="Enviar" id="Enviar" />
+      </section>
+    </form>
+    <table id="table">
+
+    </table>
+    <footer id="Main-footer">
+      <p>Copyright © EU-Productions 2023</p>
+    </footer>
+    <!--  jquery script  -->
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!--  validation script  -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.0/jquery.validate.min.js"></script>
+
+    <!--  jsrender script  -->
+    <script src="http://cdn.syncfusion.com/js/assets/external/jsrender.min.js"></script>
+
+    <!-- Essential JS UI widget -->
+    <script src="http://cdn.syncfusion.com/16.4.0.52/js/web/ej.web.all.min.js"></script>
+    <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
+    <script src="JavaS.js"></script>
+    <script src="./db-handler.js"></script>
+  </body>
+</html>

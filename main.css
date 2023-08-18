@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Ubuntu+Condensed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+/*     border: 1px solid red !important; */
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#Main-header {
+    background-color: rgb(18, 46, 170);
+    font-weight: bolder;
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    font-size: 1.4rem;
+}
+
+
+#Main-header .Logo {
+    height: 100%;
+    object-fit: contain;
+    width: 40%;
+    top: 0;
+    left: 5%;
+    position: absolute;
+}
+
+#Main-header .Burguer {
+    display: none;
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+}
+
+
+.unlisted {
+   display: flex;
+   list-style: none;
+   justify-content: end;
+   column-gap: 2rem;
+
+}
+
+
+.list-items > a, .list-items-dg > a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.1s;
+}
+
+.list-items > a:hover, .list-items-dg > a:hover {
+    color: lightgray;
+}
+
+.list-items-dg > a:focus-visible {
+    outline: none;
+}
+
+#Dialog{
+    overflow-y: hidden;
+    min-height: 100vh;
+    width: 50%;
+    color: white;
+    background-color: black;
+    margin-left: auto;
+    border: 0;
+    border-left: 3px solid white;
+    font-size: 1.4rem;
+    font-weight: bolder;
+/*     padding: 2rem; */
+}
+
+#Dialog section {
+    height: 90px;
+    padding: 1rem;
+}
+
+.BD {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    top: 3%;
+    right: 5%;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.list-dg {
+    height: 50vmax;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 3rem;
+}
+
+
+#Dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.contenedor {
+/*     container-name: hola;
+    container-type: inline-size; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+/*     grid-template-rows: repeat(2, minmax(50px, 1fr)); */
+    gap: 1rem;
+    margin: 1rem;
+}
+
+/* @container hola (max-width: 869px) {
+    .container-contacto {
+        background-color: red;
+    }
+} */
+.container-contacto {
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    min-height: 30rem;
+    padding: 1rem;
+    font-size: clamp(1rem, 2vmin, 3rem);
+}
+
+.container-contacto > img {
+    width: 6.16rem;
+/*     width: 10vmin; */
+}
+
+.contacto-info {
+    display: flex;
+    flex-direction: column;
+/*     width: 80%; */
+}
+
+.contacto-member {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    font-size: 1.4rem;
+    padding: 2rem;
+    margin: 1rem auto;
+    width: 70vw;
+    color: black;
+    background-color: gainsboro;
+    border: 2px solid gray;
+}
+
+.about > .about-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+#logeado {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    width: 60vw;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: gainsboro;
+    align-items: center;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+input:invalid {
+    background-color: red;
+}
+
+.nameandlastname {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.emailandtel {
+    display: flex;
+    column-gap: 1rem;
+}
+
+#Main-footer {
+    margin-top: auto;
+    background-color: rgb(18, 46, 170);
+    padding: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 40rem) {
+    .unlisted {
+        visibility: hidden;
+    }
+
+    #Main-header .Burguer{
+        display: block;
+        position: absolute;
+        bottom: 25%;
+        right: 5%;
+        cursor: pointer;
+    }
+
+}
